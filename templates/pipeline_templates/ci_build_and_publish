@@ -1,0 +1,17 @@
+agent {
+  get_source()
+
+  unit_test()
+  static_analysis()
+  security_analysis()
+}
+
+build_agent {
+  get_source()
+
+  build_artifacts()
+
+  on_tag primary: true, {
+    publish_artifacts()
+  }
+}
