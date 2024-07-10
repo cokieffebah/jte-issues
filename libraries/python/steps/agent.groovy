@@ -5,7 +5,7 @@ void call(Map args = [:], body) {
 
   
     node() {
-      container('python') {
+      withDockerContainer(image: 'python') {
         body()
       }
     }
